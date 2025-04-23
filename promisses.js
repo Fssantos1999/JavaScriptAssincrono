@@ -42,3 +42,13 @@ loginUser("felipe@gmail", "1234")
     .catch((err) => {
         console.error(err.message); 
     });
+
+//axios
+    axios.get('https://viacep.com.br/ws/01001000/json/').then((response)=>{
+        
+    const {data} = response
+        console.log(data.bairro);
+    }).catch((err)=>{
+        console.log(err)
+    })
+    
